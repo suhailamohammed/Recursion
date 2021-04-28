@@ -1,0 +1,25 @@
+//using recursive function: addition of first n numbers
+#include<iostream>
+using namespace std;
+
+int recursive(int n){
+    int sum = 0;
+    if(n <= 1){
+        sum = sum + 1;
+        return sum;
+    }
+    else{
+        sum = n + recursive(n-1);
+        return sum;
+    }
+}
+int main()
+{
+    int s,x;
+    cout<<"Enter n: ";
+    cin>>x;
+    //cout<<endl;
+    s = recursive(x);
+    cout<<"The sum of first n numbers: "<<s;
+    return 0;
+}
