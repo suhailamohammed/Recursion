@@ -1,0 +1,29 @@
+//check whether palindrome or not.
+#include<iostream>
+#include<string>
+using namespace std;
+
+bool isPal(string str, int low , int high){
+    
+    if(low >= high){
+        return true;
+    }
+    if(str[low] != str[high]){
+        return false;
+    }
+    return isPal(str, low+1, high-1);
+    
+}
+int main()
+{
+    int s,x;
+    string c = "suhails";
+    int len = c.length();
+    if(isPal(c,0,len-1) == true){
+        cout<<"Palindrome";
+    }
+    else{
+        cout<<"Not palindrome";
+    }
+    return 0;
+}
