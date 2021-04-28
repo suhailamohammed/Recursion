@@ -1,0 +1,30 @@
+//check whether palindrome or not.
+#include<iostream>
+using namespace std;
+
+int isPal( int n , int temp){
+    
+    if(n == 0){ //base case
+        return temp;
+    }
+    
+    temp = ( temp*10 )+ (n % 10); // reversing the integer
+    
+        return isPal(n/10 , temp); //checking each digit
+    
+    
+    
+}
+int main()
+{
+    int s,x,n;
+    cin>>n;
+    int num = isPal(n,0);
+    if(n == num){
+        cout<<"Palindrome";
+    }
+    else{
+        cout<<"Not palindrome";
+    }
+    return 0;
+}
