@@ -1,0 +1,22 @@
+
+#include<iostream>
+using namespace std;
+
+int add_digits(int n){
+   
+    if(n == 0){
+        return 0;
+    }
+        return (n%10 + add_digits(n/10));
+    
+}
+int main()
+{
+    int s,x;
+    cout<<"Enter n: ";
+    cin>>x;
+    
+    s = add_digits(x);
+    cout<<"The sum of digits in n: "<<s;
+    return 0;
+}
