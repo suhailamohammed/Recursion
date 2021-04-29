@@ -1,0 +1,32 @@
+//reverse the string.
+#include<iostream>
+#include<string>
+using namespace std;
+
+string isPal(string str, int low , int high){
+    char s;
+     if(low >= high){
+            return str;
+    }
+
+    s = str[low];
+    
+    str[low] = str[high];
+   
+    str[high] = s;
+    
+    return isPal(str, low+1, high-1);
+    
+}
+int main()
+{
+    int s,x;
+    string c = "sweetheart";
+    string srt;
+    int len = c.length();
+    
+    srt = isPal(c,0,len-1);
+    cout<<srt;
+    
+    return 0;
+}
