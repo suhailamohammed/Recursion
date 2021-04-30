@@ -3,13 +3,12 @@
 using namespace std;
 
 int recursive(int n){
-    int sum = 0;
+    int sum = n;
     if(n <= 1){
-        sum = sum + 1;
         return sum;
     }
     else{
-        sum = n + recursive(n-1);
+        sum = sum + recursive(n-1);
         return sum;
     }
 }
